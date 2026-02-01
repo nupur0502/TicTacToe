@@ -140,7 +140,7 @@ namespace ChatApp
 
         //    try
         //    {
-        //        var hfToken = "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"; // Replace with your Hugging Face token
+        //       string hfToken = ""; // Replace with your Hugging Face token
         //        var client = new AiService(hfToken);
 
         //        var reply = await client.GetResponseAsync(userMessage);
