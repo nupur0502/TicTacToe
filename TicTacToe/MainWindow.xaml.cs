@@ -38,7 +38,7 @@ namespace ChatApp
 
             try
             {
-                var hfToken = "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"; // Replace with your Hugging Face token
+                string hfToken = "";
                 var client = new AiService(hfToken);
 
                 // Serialize _boardState to a non-null string for the AI service
@@ -91,7 +91,8 @@ namespace ChatApp
 
         private async void StartGameClicked(object sender, RoutedEventArgs e)
         {
-            var hfToken = "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"; // Replace with your Hugging Face token
+            string hfToken = "";
+
             var client = new AiService(hfToken);
             await client.GetResponseAsync(userMessage);
         }
