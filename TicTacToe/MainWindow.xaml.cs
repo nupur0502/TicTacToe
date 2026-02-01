@@ -11,9 +11,6 @@ namespace ChatApp
     public partial class MainWindow : Window
     {
         private readonly List<string> _chatHistory = new();
-        // Replace this line:
-        // private readonly List<string,string> _boardState = new()
-        // with the following:
         private readonly Dictionary<string, string> _boardState = new()
         {
             {"Cell00", ""}, {"Cell01", ""}, {"Cell02", ""},
@@ -116,51 +113,5 @@ namespace ChatApp
                 return "";
         }
 
-
-
-
-
-
-
-
-
-
-        //private async void SendButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var userMessage = InputTextBox.Text;
-
-        //    if (string.IsNullOrWhiteSpace(userMessage))
-        //        return;
-
-        //    // store user message in the history list instead of overwriting the TextBox
-        //    _chatHistory.Add("You: " + userMessage);
-        //    UpdateChatHistoryTextBox();
-
-        //    InputTextBox.Clear();
-
-        //    try
-        //    {
-        //       string hfToken = ""; // Replace with your Hugging Face token
-        //        var client = new AiService(hfToken);
-
-        //        var reply = await client.GetResponseAsync(userMessage);
-        //        Console.WriteLine(reply);
-
-        //        // add AI reply to history and update the UI
-        //        _chatHistory.Add("AI: " + reply);
-        //        UpdateChatHistoryTextBox();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _chatHistory.Add("Error: " + ex.Message);
-        //        UpdateChatHistoryTextBox();
-        //    }
-        //}
-
-        //private void UpdateChatHistoryTextBox()
-        //{
-        //    ChatHistoryTextBox.Text = string.Join(Environment.NewLine + Environment.NewLine, _chatHistory);
-        //    ChatHistoryTextBox.ScrollToEnd();
-        //}
     }
 }
